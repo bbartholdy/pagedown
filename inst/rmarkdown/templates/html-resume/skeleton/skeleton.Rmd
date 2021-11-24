@@ -22,7 +22,7 @@ Contact Info {#contact}
 
 - <i class="fa fa-envelope"></i> lijia.yu@outlook.com
 - <i class="fa fa-github"></i> [github.com/yulijia](https://github.com/yulijia)
-- <i class="fa fa-phone"></i> +1 000-000-0000
+- <i class="ai ai-orcid"></i> +1 0000-0000-0000-0000
 - For more information, please contact me via email.
 
 

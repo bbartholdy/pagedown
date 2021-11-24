@@ -29,6 +29,7 @@ Suggests:
     pdftools,
     revealjs,
     covr
+Remotes: mitchelloharawild/icons
 License: MIT + file LICENSE
 URL: https://github.com/rstudio/pagedown
 BugReports: https://github.com/rstudio/pagedown/issues
