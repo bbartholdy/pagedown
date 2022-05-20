@@ -98,7 +98,7 @@ img{
   font-size: 0.8rem;
   float: right;
   position: absolute;
-  left: 0;
+  right: 0;
 }
 
 #aside h1, h2, h3, body{
