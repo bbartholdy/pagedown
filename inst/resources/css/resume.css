@@ -14,7 +14,7 @@
   --content-width: calc(var(--page-width) - var(--margin-right) - var(--margin-left));
   --root-font-size: 12pt;
   --sidebar-width: 15rem;
-  --sidebar-background-color: #f2f2f2;
+  --sidebar-background-color: #467aa5;
   --main-width: calc(var(--content-width) - var(--sidebar-width));
   --decorator-horizontal-margin: 0.2in;
 
@@ -99,6 +99,10 @@ img{
   float: right;
   position: absolute;
   right: 0;
+}
+
+#aside h1 h2 h3 body{
+  color: #fff;
 }
 
 /* main */
