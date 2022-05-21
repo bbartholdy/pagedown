@@ -78,6 +78,7 @@ svg {
 
 a{
   text-decoration: none;
+  color: rgb(249, 38, 114);
 }
 
 img{
@@ -114,19 +115,22 @@ h1, h2{
 
 #title{
   position: relative;
-  left: 0.55in;
-  margin: auto 0.55in 0.3in auto;
+  left: 0.1in;
+  margin: auto 0.2in 0.2in auto;
   line-height: 1.2;
+  text-align: justify;
 }
 
 #title h1{
   font-weight: 300;
   font-size: 1.8rem;
   line-height: 1.5;
+  text-align: left;
 }
 
 #title h3{
   font-size: 0.8rem;
+  text-align: left;
 }
 
 .aside h1, .aside h2, .aside h3 {
@@ -145,6 +149,10 @@ h1, h2{
 
 .main-block{
   margin-top: 0.1in;
+}
+
+#title{
+  margin-left: 0;
 }
 
 #main h2{
@@ -284,7 +292,7 @@ h1, h2{
 }
 
 .details header{
-  color: #212121;
+  color: #292929;
 }
 
 .details h3{
@@ -391,6 +399,19 @@ h1, h2{
 #skills ul{
   margin: 0.05in 0 0.15in;
   padding: 0;
+}
+
+#expertise{
+  line-height: 1.5;
+}
+
+#expertise ul{
+  margin: 0.05in 0 0.15in;
+  padding: 0;
+}
+
+#expertise li {
+  margin-top: 0.05in;
 }
 
 #disclaimer{
