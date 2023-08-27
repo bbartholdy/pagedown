@@ -11,9 +11,9 @@ name: Build Examples
 
 jobs:
   R-CMD-check:
-    runs-on: ubuntu-18.04
-    if: github.event.name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
-    name: 'ubuntu-18.04 (R release) [Pandoc 2.14.2]'
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    name: 'ubuntu-latest (R release) [Pandoc 2.14.2]'
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -21,16 +21,28 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: r-lib/actions/setup-r@v1
+      - uses: r-lib/actions/setup-r@v2
         with:
           use-public-rspm: true
 
-      - uses: r-lib/actions/setup-pandoc@v1
+      - uses: r-lib/actions/setup-pandoc@v2
         with:
-          pandoc-version: 2.14.2
+          pandoc-version: 2.19.2
 
-      - uses: r-lib/actions/setup-r-dependencies@v1
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: local::.
 
       - name: Build examples
         run: Rscript tools/website.R
         shell: bash
+
+      - name: Clean source files for deployment
+        run: |
+          rm *.Rmd index.bib
+        working-directory: inst/examples
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: inst/examples # The folder the action should deploy.
